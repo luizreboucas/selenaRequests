@@ -1,10 +1,13 @@
 import React from 'react'
 import {View, Text} from 'react-native'
 
-function Second() {
+function Second({route,navigation}) {
+
+  const {token, user} = route.params
   return (
     <View>
-        <Text>Segunda página aqui</Text>
+        <Text>token: {token}</Text>
+        <Text>{user.username}</Text>
     </View>
   )
 }

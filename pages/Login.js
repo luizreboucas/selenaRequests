@@ -13,9 +13,10 @@ export default function Home({navigation}) {
    try {
     const response = await axios.post('https://myselena.org//wp-json/learnpress/v1/token', user)
     const token = response.data.token
-    
+    console.warn(token)
+    navigation.navigate('second', {token, user})
    } catch (error) {
-    
+    console.warn(error)
    }
     
   }
